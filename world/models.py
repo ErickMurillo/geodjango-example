@@ -1,5 +1,6 @@
 from django.contrib.gis.db import models
 
+
 class WorldBorder(models.Model):
     # Regular Django fields corresponding to the attributes in the
     # world borders shapefile.
@@ -18,7 +19,8 @@ class WorldBorder(models.Model):
     # GeoDjango-specific: a geometry field (MultiPolygonField), and
     # overriding the default manager with a GeoManager instance.
     mpoly = models.MultiPolygonField()
-    objects = models.GeoManager()
+    objects = models.GeoManager( )
+  
 
     # Returns the string representation of the model.
     def __str__(self):              # __unicode__ on Python 2
